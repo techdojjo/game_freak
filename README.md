@@ -11,7 +11,7 @@ For help getting started with Flutter, view our online
 
 https://www.giantbomb.com/api/documentation
 
-## Screenshot(s)
+## Screenshots
 
 Android             |  iOS
 :-------------------------:|:-------------------------:
