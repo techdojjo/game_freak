@@ -19,26 +19,26 @@ class Game {
   }
 
   String name() {
-    return (_name == null) ? "" : _name;
+    return _name == null ? "" : _name;
   }
 
   String siteDetailUrl() {
-    return (_siteDetailUrl == null) ? "" : _siteDetailUrl;
+    return _siteDetailUrl == null ? "" : _siteDetailUrl;
   }
 
   String apiDetailUrl() {
-    return (_apiDetailUrl == null) ? "" : _apiDetailUrl;
+    return _apiDetailUrl == null ? "" : _apiDetailUrl;
   }
 
   String deck() {
-    return (_deck == null) ? "(No Deck Available)" : _deck;
+    return _deck == null ? "(No Deck Available)" : _deck;
   }
 
   String iconUrl() {
-    return (_iconUrl == null) ? "" : _iconUrl;
+    return _iconUrl == null ? "" : _iconUrl;
   }
 
   String screenUrl() {
-    return (_screenLargeUrl == null) ? "" : _screenLargeUrl;
+    return _screenLargeUrl == null ? "" : _screenLargeUrl;
   }
 }
