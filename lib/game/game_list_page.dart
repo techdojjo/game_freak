@@ -13,8 +13,8 @@ class GameListPage extends StatefulWidget {
 
 class GameListPageState extends State<GameListPage> {
 
-  String _url = "https://www.giantbomb.com/api/games/?api_key=b6b0857eb0c182188ee8d5abaccf6156783897cc&format=json&filter=platforms:43&fields=name,deck,image,api_detail_url,site_detail_url&sort=name:asc&offset=173&limit=25";
   List<Game> _games = new List();
+  String _url = "https://www.giantbomb.com/api/games/?api_key=b6b0857eb0c182188ee8d5abaccf6156783897cc&format=json&filter=platforms:43&fields=name,deck,image,api_detail_url,site_detail_url&sort=name:asc&offset=173&limit=25";
 
   Future<List<Game>> _fetchGames() async {
     var response = await http
