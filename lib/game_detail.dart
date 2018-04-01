@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_freak/game/game.dart';
+import 'package:game_freak/game.dart';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 

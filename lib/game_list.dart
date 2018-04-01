@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:game_freak/game/game.dart';
-import 'package:game_freak/game/game_card.dart';
-import 'package:game_freak/game/game_tile.dart';
+import 'package:game_freak/game.dart';
+import 'package:game_freak/game_card.dart';
+import 'package:game_freak/game_tile.dart';
 import 'package:http/http.dart' as http;
 
 class GameListPage extends StatefulWidget {
