@@ -3,7 +3,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:game_freak/game/game.dart';
-import 'package:game_freak/game/game_detail_page.dart';
+import 'package:game_freak/game/game_card.dart';
+import 'package:game_freak/game/game_tile.dart';
 import 'package:http/http.dart' as http;
 
 class GameListPage extends StatefulWidget {
@@ -48,16 +49,8 @@ class GameListPageState extends State<GameListPage> {
         itemCount: _games == null ? 0 : _games.length,
         itemBuilder: (BuildContext context, int index) {
           final Game game = _games[index];
-          return new ListTile(
-            leading: new Image.network(game.iconUrl()),
-            title: new Text(game.name()),
-            onTap: () {
-              Navigator.push(
-                context,
-                new MaterialPageRoute(builder: (context) => new GameDetailPage(game)),
-              );
-            },
-          );
+          return new GameTile(game);
+//          return new GameCard(game);
         },
       ),
     );
