@@ -4,23 +4,23 @@ import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class GameDetailPage extends StatefulWidget {
-  Game game;
+  Game _game;
 
   GameDetailPage(Game game) {
-    this.game = game;
+    this._game = game;
   }
 
   @override
   State createState() {
-    return new GameDetailPageState(game);
+    return new GameDetailPageState(_game);
   }
 }
 
 class GameDetailPageState extends State<GameDetailPage> {
-  Game game;
+  Game _game;
 
   GameDetailPageState(Game game) {
-    this.game = game;
+    this._game = game;
   }
 
   @override
@@ -28,13 +28,13 @@ class GameDetailPageState extends State<GameDetailPage> {
     return new Scaffold(
       appBar: new AppBar(
           backgroundColor: new Color(0xFFFF0000),
-          title: new Text(game.name()),
+          title: new Text(_game.name()),
           actions: <Widget>[
             new IconButton(
                 icon: const Icon(Icons.web),
                 tooltip: 'Refresh',
                 onPressed: () {
-                  _launchURL(game);
+                  _launchURL(_game);
                 }),
           ]),
       body: new Center(
@@ -49,14 +49,14 @@ class GameDetailPageState extends State<GameDetailPage> {
                     image: new DecorationImage(
                       fit: BoxFit.fitWidth,
                       alignment: FractionalOffset.topCenter,
-                      image: new NetworkImage(game.screenUrl()),
+                      image: new NetworkImage(_game.screenUrl()),
                     )),
               ),
             ),
             new Container(
                 padding: new EdgeInsets.all(8.0),
                 child: new Text(
-                  game.deck(),
+                  _game.deck(),
                   style: new TextStyle(fontSize: 22.0),
                 ))
           ],
@@ -74,8 +74,8 @@ class GameDetailPageState extends State<GameDetailPage> {
   }
 
   _share() {
-    if (game != null) {
-      share(game.siteDetailUrl());
+    if (_game != null) {
+      share(_game.siteDetailUrl());
     }
   }
 

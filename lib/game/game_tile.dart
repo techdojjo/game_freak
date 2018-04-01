@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:game_freak/game/game.dart';
-import 'package:game_freak/game/game_detail_page.dart';
+import 'package:game_freak/game/game_detail.dart';
 
 
 class GameTile extends StatelessWidget {

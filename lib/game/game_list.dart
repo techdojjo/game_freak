@@ -13,9 +13,9 @@ class GameListPage extends StatefulWidget {
 }
 
 class GameListPageState extends State<GameListPage> {
-
   List<Game> _games = new List();
-  String _url = "https://www.giantbomb.com/api/games/?api_key=b6b0857eb0c182188ee8d5abaccf6156783897cc&format=json&filter=platforms:43&fields=name,deck,image,api_detail_url,site_detail_url&sort=name:asc&offset=173&limit=25";
+  String _url =
+      "https://www.giantbomb.com/api/games/?api_key=b6b0857eb0c182188ee8d5abaccf6156783897cc&format=json&filter=platforms:43&fields=name,deck,image,api_detail_url,site_detail_url&sort=name:asc&offset=173&limit=25";
 
   Future<List<Game>> _fetchGames() async {
     var response = await http
@@ -49,8 +49,8 @@ class GameListPageState extends State<GameListPage> {
         itemCount: _games == null ? 0 : _games.length,
         itemBuilder: (BuildContext context, int index) {
           final Game game = _games[index];
-          return new GameTile(game);
 //          return new GameCard(game);
+          return new GameTile(game);
         },
       ),
     );
