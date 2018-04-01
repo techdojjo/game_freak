@@ -49,8 +49,7 @@ class GameListPageState extends State<GameListPage> {
         itemCount: _games == null ? 0 : _games.length,
         itemBuilder: (BuildContext context, int index) {
           final Game game = _games[index];
-//          return new GameCard(game);
-          return new GameTile(game);
+          return new GameCard(game);
         },
       ),
     );
