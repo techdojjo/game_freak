@@ -3,23 +3,23 @@ import 'package:game_freak/game/game.dart';
 import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class GamePage extends StatefulWidget {
+class GameDetailPage extends StatefulWidget {
   Game game;
 
-  GamePage(Game game) {
+  GameDetailPage(Game game) {
     this.game = game;
   }
 
   @override
   State createState() {
-    return new GamePageState(game);
+    return new GameDetailPageState(game);
   }
 }
 
-class GamePageState extends State<GamePage> {
+class GameDetailPageState extends State<GameDetailPage> {
   Game game;
 
-  GamePageState(Game game) {
+  GameDetailPageState(Game game) {
     this.game = game;
   }
 

@@ -3,15 +3,15 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:game_freak/game/game.dart';
-import 'package:game_freak/game/game_page.dart';
+import 'package:game_freak/game/game_detail_page.dart';
 import 'package:http/http.dart' as http;
 
-class GameBrowserPage extends StatefulWidget {
+class GameListPage extends StatefulWidget {
   @override
-  GameBrowserPageState createState() => new GameBrowserPageState();
+  GameListPageState createState() => new GameListPageState();
 }
 
-class GameBrowserPageState extends State<GameBrowserPage> {
+class GameListPageState extends State<GameListPage> {
 
   String _url = "https://www.giantbomb.com/api/games/?api_key=b6b0857eb0c182188ee8d5abaccf6156783897cc&format=json&filter=platforms:43&fields=name,deck,image,api_detail_url,site_detail_url&sort=name:asc&offset=173&limit=25";
   List<Game> _games = new List();
@@ -54,7 +54,7 @@ class GameBrowserPageState extends State<GameBrowserPage> {
             onTap: () {
               Navigator.push(
                 context,
-                new MaterialPageRoute(builder: (context) => new GamePage(game)),
+                new MaterialPageRoute(builder: (context) => new GameDetailPage(game)),
               );
             },
           );
